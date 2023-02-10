@@ -1,0 +1,2 @@
+[submodule "https://github.com/espressif/esp32-camera"]
+	url = components/esp32-camera
