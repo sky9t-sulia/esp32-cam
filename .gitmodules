@@ -2,3 +2,8 @@
 	path = components/esp32-camera
 	url = https://github.com/espressif/esp32-camera.git
 	branch = master
+
+[submodule "st7789"]
+	path = components/st7789
+	url = https://github.com/sky9t-sulia/st7789.git
+	branch = master
