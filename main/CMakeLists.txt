@@ -1,6 +1,8 @@
-idf_component_register(SRCS 
-"main.c" 
-"camera_config.c"
-"wifi_config.c"
-"web_server.c"
-                    INCLUDE_DIRS ".")
+set(COMPONENT_SRCS "main.c" "camera_handler.c" "wifi_handler.c" "httpd_handler.c")
+set(INCLUDE_DIRS "include")
+
+set(COMPONENT_ADD_INCLUDEDIRS
+  include
+)
+
+register_component()

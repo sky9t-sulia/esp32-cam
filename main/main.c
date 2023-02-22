@@ -1,8 +1,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "wifi_config.h"
-#include "camera_config.h"
-#include "web_server.h"
+#include "wifi_handler.h"
+#include "camera_handler.h"
+#include "httpd_handler.h"
 
 #include "st7789.h"
 
@@ -29,7 +29,7 @@ void view_finder_task(void *pv)
 
     while (true)
     {
-        fb = esp_camera_fb_get();
+        camera_fb_t *fb = esp_camera_fb_get();
 
         if (fb)
         {
