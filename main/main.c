@@ -10,14 +10,12 @@ static const char *TAG = "APP";
 
 void view_finder_task(void *pv)
 {
-    esp_err_t err;
-    err = init_camera();
+    esp_err_t err = init_camera();
     if (err != ESP_OK)
     {
         printf("err: %s\n", esp_err_to_name(err));
     }
 
-    camera_fb_t *fb = NULL;
     st7789_t lcd = {
         .io_handle = NULL,
         .panel_handle = NULL};
@@ -27,7 +25,6 @@ void view_finder_task(void *pv)
     printf("SCL %d, SDA %d, RES %d, DC %d, CS %d\n", CONFIG_SCLK_GPIO, CONFIG_MOSI_GPIO, CONFIG_RESET_GPIO, CONFIG_DC_GPIO, CONFIG_CS_GPIO);
 
     int buff_size = (sizeof(uint16_t) * LCD_HOR_RES * PARALLEL_LINES);
-
     uint16_t *line = (uint16_t *)heap_caps_malloc(buff_size, MALLOC_CAP_DMA);
 
     while (true)
