@@ -15,7 +15,7 @@
 
 #include "esp_camera.h"
 
-#define CAMERA_MODEL_WROVER_KIT
+#define CAMERA_MODEL_AI_THINKER
 
 #if defined(CAMERA_MODEL_WROVER_KIT)
 #define PWDN_GPIO_NUM    -1

@@ -1,4 +1,4 @@
-set(COMPONENT_SRCS "main.c" "camera_handler.c" "wifi_handler.c" "httpd_handler.c")
+set(COMPONENT_SRCS "main.c" "camera_handler.c" "sdmmc_handler.c" "wifi_handler.c" "httpd_handler.c")
 set(INCLUDE_DIRS "include")
 
 set(COMPONENT_ADD_INCLUDEDIRS
